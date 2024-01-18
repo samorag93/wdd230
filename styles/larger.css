@@ -1,0 +1,19 @@
+@media (min-width:768px) {
+    body {
+        font-size: 18px;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin: 15px;
+    }
+    nav {
+        display: flex;
+        justify-content: space-around;
+      }
+    
+      nav a {
+        text-align: center;
+      }
+}
