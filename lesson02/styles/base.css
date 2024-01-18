@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4; 
+    color: #333; 
+    line-height: 1.6;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #0b1f31;
+    color: white;
+}
+
+header p, h1 {
+    font-size: 40px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    /* margin: 0 ; */
+    max-width: 100%;
+}
+
+.card {
+    background-color: #cbcaca; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 25px;    
+}
+
+.card h2 {
+    background-color: #3a4958;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.card img {
+    width: calc(100% - 20px);
+    height: 100%;
+    margin: 10px;
+}
+
+.card h3, a {
+    font-size: 30px;
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    /* Estilos para vista pequeña */
+    main {
+        margin: 15px;
+    }
+}
+
+/* Medium View */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Estilos para vista mediana */
+    main {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin: 15px;
+    }
+}
+
+/* Larger Views */
+@media (min-width: 1025px) {
+    /* Estilos para vista grande */
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        margin: 20px;
+    }
+}
