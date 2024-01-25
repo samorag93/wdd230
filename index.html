@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moroni Aguilar - WDD 230 - Web Frontend Development</title>
-    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta property="og:title" content="Moroni Aguilar - WDD 230 - Web Frontend Development">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://g.co/kgs/YPD4i6M">
@@ -17,30 +18,34 @@
     <header>
         <img src="images/profileImage.jpg" alt="my image">
         <h1>Samuel Moroni Aguilar Cordova</h1>
-    </header>
-    <nav>            
-        <a href="#">Home</a>
-        <a href="lesson03/chamber-site-plan.htm">Site Plan</a>
-        <a href="chamber/">Chamber</a>
-        <a href="https://www.byui.edu/">BYU-Idaho</a>
-        <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?lang=spa&id=p27#p27">Scripture</a>
+    </header>    
+    <a id="menu" href="#"></a>
+    <nav>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="lesson03/chamber-site-plan.htm">Site Plan</a></li>
+            <li><a href="chamber/">Chamber</a></li>
+            <li><a href="https://www.byui.edu/">BYU-Idaho</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?lang=spa&id=p27#p27">Scripture</a></li>
+        </ul>
     </nav>
     <main>
         <h2>WDD 230: Web Frontend Development</h2>
         <hr>
         <section class="card">
             <h3>Learning Activities</h3>
-            <ul>
-                <li><a href="#">Activity 1</a></li>
-                <li><a href="#">Activity 2</a></li>
-            </ul>
+                <ul>
+                    <li><a href="#">Activity 1</a></li>
+                    <li><a href="#">Activity 2</a></li>
+                </ul>
         </section>
         <section class="card">
             <h3>Information</h3>
             <p>Place: [Weather Place]</p>
             <p>Weather: [Weather placeholder]</p>
             <p>Number of visits: [Visits placeholder]</p>
-        </section>
+        </section>        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8054.298684156047!2d-3.7705577994458994!3d40.23193580345082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f5399094ea7f%3A0x52f9e7e532f55e3b!2sC.%20Reina%20Victoria%2C%204%2C%2028982%20Parla%2C%20Madrid!5e0!3m2!1ses!2ses!4v1706133002278!5m2!1ses!2ses" style="border:0;" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
     <footer>
         <p>&copy; <span id="year"></span> 
@@ -48,6 +53,21 @@
             Spain <img src="images/SpainFlag.jpg" alt=""></p>
         <p id="lastModified"></p>
     </footer>
+    <!-- <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="close-icon" onclick="toggleMenu()">X</div>
+        <nav class="mobile-menu">            
+            <a href="#">Home</a>
+            <a href="lesson03/chamber-site-plan.htm">Site Plan</a>
+            <a href="chamber/">Chamber</a>
+            <a href="https://www.byui.edu/">BYU-Idaho</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?lang=spa&id=p27#p27">Scripture</a>
+        </nav>
+    </div> -->
     <script src="scripts/getdates.js"></script>
 </body>
 </html>

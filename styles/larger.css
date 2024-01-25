@@ -1,4 +1,56 @@
-@media (min-width:768px) {
+
+
+#menu {
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+	font-weight:700;
+  padding: .5rem .75rem;
+	background-color: #eee;
+	color: #000;
+}
+
+#menu::before{
+  content: "≡";
+}
+
+.navigation {
+  list-style: none;
+  display: block;
+}
+
+.navigation li {
+  display: none;
+}
+
+.navigation a {
+  display: block;
+}
+
+
+
+.navigation a:hover, navigation a:active {
+  color: black;
+  background-color: rgb(88, 86, 86);
+}
+
+.show li {
+  display: block;
+}
+
+#menu.show::before {
+  content: "X";
+}
+
+.navigation::before {
+  content: \f06e;
+}
+
+nav li a::before {
+  content: "\2605";
+  margin-right: 5px;
+}
+/* @media (min-width:768px) {
     body {
         font-size: 18px;
     }
@@ -8,12 +60,33 @@
         gap: 15px;
         margin: 15px;
     }
-    nav {
-        display: flex;
-        justify-content: space-around;
-      }
-    
-      nav a {
-        text-align: center;
-      }
+} */
+
+@media only screen and (min-width: 40em) {
+	body {
+    font-size: 18px;
+  }
+  main {
+    gap: 15px;
+    width: 100%;
+  }
+  nav li a::before {
+    content:none;
+  }
+  .navigation {
+		display: flex;
+	}
+	.navigation li {
+		display: block; /* change state in small view */
+		flex: 1 1 100%;
+	}
+	.navigation a {
+		text-align: center;
+	}
+
+  
+
+	#menu {
+		display: none;
+	}
 }
