@@ -2,7 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	/* box-sizing: border-box; */
+	box-sizing: border-box;
 }
 
 nav ul {
@@ -15,8 +15,8 @@ header {
     
     color: white;
     display: flex;
-    align-items: center; /* Centra verticalmente los elementos */
-    justify-content: space-between; /* Coloca los elementos en los extremos */
+    align-items: center; 
+    justify-content: space-between; 
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -43,11 +43,11 @@ nav li::after {
     align-items: center; 
 }
 
-a{
+nav a{
     text-decoration: none;
     padding: 10px;
     font-size: 25px;
-    color: #555555;
+    color: black;
 }
 ul {
     list-style-type: none;
@@ -108,6 +108,10 @@ ul {
     grid-column: 7/11;
 }
 
+.card1 a, .card2 a, .card3 a, .new1 a, .new2 a{
+    text-decoration: none;
+    /* color: black; */
+}
 .weather-card {
     grid-row: 7/8;
     grid-column: 1/6;
@@ -132,4 +136,14 @@ footer {
 }
 .social-media img {
     width: 30px;
+}
+
+#mode {
+    text-align: right;
+	position: end;
+	top: 1rem;
+	right: 1rem;
+	font-size: 3rem;
+	cursor: pointer;
+	font-size: 2rem;
 }
