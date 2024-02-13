@@ -42,9 +42,6 @@
   content: "X";
 }
 
-.navigation::before {
-  content: \f06e;
-}
 
 nav li a::before {
   content: "\2605";
