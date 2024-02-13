@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moroni Aguilar - WDD 230 - Web Frontend Development</title>
-    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="favicon.ico">
@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <img src="images/profileImage.jpg" alt="my image">
+        <img src="images/profileImage.webp" alt="my image">
         <h1>Samuel Moroni Aguilar Cordova</h1>
     </header>    
     <a id="menu" href="#"></a>
@@ -30,16 +30,26 @@
         </ul>
     </nav>
     <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 400px)">
+                <source srcset="images/hero-large.webp" media="(min-width: 401px) and (max-width: 960px)"> 
+                <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/1280x800/6-Rome-Temple-2160338.jpg" alt="Rome temple">
+            </picture>
+        </div>
+        <div class="herolabel">
+            <p>Rome Italy Temple</p>
+        </div>
         <h2>WDD 230: Web Frontend Development</h2>
         <hr>
         <section class="card">
             <h3>Learning Activities</h3>
                 <ul>
-                    <li><a href="lesson01/holygrial.html">Activity 1</a></li>
-                    <li><a href="lesson02/design-principles.html">Activity 2</a></li>
-                    <li><a href="lesson03/chamber-site-plan.html">Activity 3</a></li>
-                    <li><a href="lesson05/bom.html">Activity 4</a></li>
-                    <li><a href="lessons/image-responsive.html">Activity 5</a></li>
+                    <li><a href="lesson01/holygrial.html">Holy Grial</a></li>
+                    <li><a href="lesson02/design-principles.html">Desing Principles</a></li>
+                    <li><a href="lesson03/chamber-site-plan.html">Chamber Site Plan</a></li>
+                    <li><a href="lesson05/bom.html">Book of Mormon</a></li>
+                    <li><a href="lessons/image-responsive.html">Responsive image</a></li>
                 </ul>
         </section>
         <section class="card">
