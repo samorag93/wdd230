@@ -58,9 +58,17 @@ ul {
     width: 100px;
 }
 
+.hero {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
 #hero-img {
     width: 100%;
 }
+
+
 
 #title {
     background-color: #d7192d;
@@ -72,28 +80,33 @@ ul {
 .home-grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
+    color: black;   
 }
 .img1, .img2, .img3 {
     width: 100%;
 }
 .title1 {
     grid-column: 1/11;
+    text-align: center;
+    margin: 20px;
 }
-.card1 {
+.mySlides1 {
     grid-column: 2/4;
     grid-row: 2/3;
 }
-.card2{
+.mySlides2{
     grid-column: 5/7;
     grid-row: 2/3;
 }
-.card3{
+.mySlides3{
     grid-column: 8/10;
     grid-row: 2/3;
 }
 .title2 {
-    grid-column: 1/7;
+    margin: 20px;
+    grid-column: 1/11;
     grid-row: 3/4;
+    text-align: center;
 }
 .imgnew1, .imgnew2 {
     width: 90%;
@@ -111,6 +124,7 @@ ul {
 .card1 a, .card2 a, .card3 a, .new1 a, .new2 a{
     text-decoration: none;
     /* color: black; */
+    margin-bottom: 100px;
 }
 .weather-card {
     grid-row: 7/8;
@@ -146,4 +160,25 @@ footer {
 	font-size: 3rem;
 	cursor: pointer;
 	font-size: 2rem;
+}
+.mySlides1, .mySlides2, .mySlides3, .new1, .new2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.home-grid img {
+    margin-bottom: 10px;
+}
+
+.button1, .button2, .button3 {
+    text-decoration: none;
+    /* color: black; */
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 0.5rem 1em;
+} 
+
+.button1:hover, .button2:hover, .button3:hover, h3:hover {
+    background-color: #d7192d;
+    color: white;
 }

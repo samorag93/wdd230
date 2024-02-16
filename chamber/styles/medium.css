@@ -7,7 +7,7 @@
   font-weight:700;
   padding: .5rem .75rem;
   background-color: #eee;
-      color: #000;
+  color: #000;
 }
   
 #menu::before {
@@ -49,14 +49,20 @@ nav li a::before {
   margin-right: 5px;
 }
 
+.mySlides1, .mySlides2, .mySlides3 {
+  display:none
+}
+
+.w3-left, .w3-right, .w3-badge {
+  cursor:pointer; 
+  display: none;
+}
+
+
+
 @media (min-width: 600px) {
   body {
     font-size: 18px;
-  }
-  
-  main {
-    grid-template-columns: 1fr;      
-    width: 100%;      
   }
       
   nav li a::before {
@@ -76,4 +82,19 @@ nav li a::before {
   #menu {
     display: none;
   }
+
+  
+  .mySlides1, .mySlides2, .mySlides3 {
+    display: flex; 
+    text-align: center;
+  }
+  
+  .new1 h3, .new2 h3 {
+    text-decoration: none;
+    /* color: black; */
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 0.5rem 1em;
+  }
+  
 }

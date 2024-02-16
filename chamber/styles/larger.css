@@ -1,0 +1,19 @@
+
+  
+  /* medium.css */
+  @media (max-width: 600px) {
+    /* .w3-content .mySlides {
+      display: none;
+    } */
+    .home-grid {
+        display: none; /* Oculta el grid en pantallas pequeñas */
+    }
+    .mySlides1, .mySlides2, .mySlides3 {
+        display: block; /* Oculta las tarjetas en el slideshow en pantallas pequeñas */
+    }
+    main.home-grid {
+        display: block; /* Asegura que el contenido del main se muestre en pantallas pequeñas */
+    }
+  }
+
+  
