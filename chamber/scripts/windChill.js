@@ -9,7 +9,6 @@ function calculateWindChill(temperature, windSpeed) {
     }
 }
 
-
 var temperature = parseFloat(document.getElementById("temperature").innerText);
 var windSpeed = parseFloat(document.getElementById("windSpeed").innerText);
 
