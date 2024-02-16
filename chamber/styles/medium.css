@@ -41,7 +41,7 @@
 }
 
 .navigation::before {
-  content: \f06e;
+  content: '|';
 }
 
 nav li a::before {
