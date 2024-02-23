@@ -147,6 +147,10 @@ footer {
     margin-top: 50px;
     background-color: #dedcdc;
     height: 100px;
+    text-decoration: none;
+}
+footer a {
+    text-decoration: none;
 }
 .social-media img {
     width: 30px;
@@ -180,4 +184,56 @@ footer {
 .button1:hover, .button2:hover, .button3:hover, h3:hover {
     background-color: #d7192d;
     color: white;
+}
+
+/* Discover page */
+/* #upcoming-events ul li:hover button {
+    opacity: 1;
+} */
+#upcoming-events h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+}
+  
+#upcoming-events ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+}
+  
+#upcoming-events li {
+      flex: 1 1 calc(33.333% - 2rem);
+      margin-bottom: 2rem;
+      margin-right: 2rem;
+      background-color: #da6666;
+      padding: 1rem;
+      border-radius: 4px;
+      text-align: center;
+      position: relative;
+}
+  
+#upcoming-events li img {
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+}
+  
+#upcoming-events li .content {
+      padding: 1rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #d7192d;
+      border-radius: 0 0 4px 4px;
+}
+  
+  
+  
+@media (max-width: 768px) {
+    #upcoming-events li {
+          flex: 1 0 100%;
+          margin-right: 0;
+    }
 }
