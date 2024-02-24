@@ -32,31 +32,71 @@
         }
     });
 
-    var slideIndex = 1;
-showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
+function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("slideshow-img");
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
 }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+// Abrir y cerrar el modal
+document.addEventListener("DOMContentLoaded", function() {
+  let modal = document.getElementById("myModal");
+  let modalMessage = document.getElementById("modal-message");
+  let span = document.getElementsByClassName("close")[0];
+
+  // Función para mostrar el modal con el mensaje
+  function showModal(message) {
+      modalMessage.textContent = message;
+      modal.style.display = "block";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
+
+  // Si el usuario hace clic en (x), cierra el modal
+  span.onclick = function() {
+      modal.style.display = "none";
   }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
 
+  // Si el usuario hace clic en cualquier lugar fuera del modal, cierra el modal
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
 
+  // Mensaje sobre la última visita utilizando localStorage
+  let lastVisit = localStorage.getItem('lastVisit');
+  let currentDate = Date.now(); 
+  let currentDateString = new Date(currentDate).toISOString().split('T')[0];
+
+  if(!lastVisit) {
+      showModal("Welcome! Let us know if you have any questions.");
+  } else {
+      let daysSinceLastVisit = Math.floor((currentDate - lastVisit) / (1000 * 60 * 60 * 24));
+      if(daysSinceLastVisit < 1) {
+          showModal("Back so soon! Awesome!");
+      } else {
+          let message = "You last visited  " + daysSinceLastVisit + " " + ((daysSinceLastVisit === 1) ? "day ago" : "days ago");
+          showModal(message);
+      }
+  }
+
+  localStorage.setItem('lastVisit', currentDate); // Almacena la fecha actual en localStorage
+});

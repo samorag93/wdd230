@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="icon.ico">
-    <meta name="description" content="Home page for Madrid Chamber of Commerce">
+    <meta name="description" content="Discover page for Madrid Chamber of Commerce">
     <meta name="author" content="Samuel Moroni Aguilar Cordova">
-    <meta property="og:title" content="Madrid Chamber of Commerce">
+    <meta property="og:title" content="Discover Madrid Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/Chamber_of_commerce_of_madridlogo.webp">
     <meta property="og:url" content="https://samorag93.github.io/wdd230/chamber/index.html">
@@ -34,41 +34,55 @@
         🕶️
     </div>
     <main>
+        <div id="slideshow-container">
+            <img class="slideshow-img" src="images/disc_hero.webp" alt="Slideshow Image 1">
+            <img class="slideshow-img" src="images/disc_hero2.webp" alt="Slideshow Image 2">
+            <img class="slideshow-img" src="images/disc_hero3.webp" alt="Slideshow Image 3">
+            <img class="slideshow-img" src="images/disc_hero4.webp" alt="Slideshow Image 4">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modal-message"></p>
+            </div>
+        </div>
+        <h1>Discover Your Next Step</h1>
         <section id="upcoming-events">
-            <h2>Upcoming Events</h2>
             <ul>
                 <li>
-                    <img src="images/disc_card1.webp" alt="Imagen 1">
+                    <img src="images/disc_card1.webp" alt="Imagen 1" loading="lazy">
                     <div class="content">
                         <p>Conference, Convention, & Summit Sessions</p>
                     </div>
                 </li>
                 <li>
-                    <img src="images/disc_card2.webp" alt="Imagen 2">
+                    <img src="images/disc_card2.webp" alt="Imagen 2" loading="lazy">
                     <div class="content">
                         <p>Webinar Recordings</p>
                     </div>
                 </li>
                 <li>
-                    <img src="images/disc_card3.webp" alt="Imagen 3">
+                    <img src="images/disc_card3.webp" alt="Imagen 3" loading="lazy">
                     <div class="content">
                         <p>CEE Certification</p>
                     </div>
                 </li>
                 <li>
-                    <img src="images/disc_card4.webp" alt="Imagen 4">
+                    <img src="images/disc_card4.webp" alt="Imagen 4" loading="lazy">
                     <div class="content">
                         <p>eCourses and Publications</p>
                     </div>
                 </li>
                 <li class="conference">
-                    <img src="images/disc_card5.webp" alt="Imagen 5">
+                    <img src="images/disc_card5.webp" alt="Imagen 5" loading="lazy">
                     <div class="content">
                         <p>Upcoming Events</p>
                     </div>
                 </li>
                 <li class="eCourses">
-                    <img src="images/disc_card6.webp" alt="Imagen 6">
+                    <img src="images/disc_card6.webp" alt="Imagen 6" loading="lazy">
                     <div class="content">
                         <p>Division and Community Peer Group Resources</p>
                     </div>
