@@ -19,15 +19,18 @@
 
     const modeButton = document.querySelector("#mode");
     const main = document.querySelector("main");
+    const form = document.querySelector(".formjoin");
 
     modeButton.addEventListener("click", () => {
         if (modeButton.textContent.includes("🕶️")) {
             main.style.background = "black";
             main.style.color = "white";
+            form.style.background = "black"
             modeButton.textContent = "🔆";
         } else {
             main.style.background = "white";
             main.style.color = "black";
+            form.style.background = "#eceaea"
             modeButton.textContent = "🕶️";
         }
     });
@@ -100,3 +103,57 @@ document.addEventListener("DOMContentLoaded", function() {
 
   localStorage.setItem('lastVisit', currentDate); // Almacena la fecha actual en localStorage
 });
+
+
+function showBenefits() {
+    var membershipLevel = document.getElementById("membership-level").value;
+    var benefitsContainer = document.getElementById("benefits-container");
+    benefitsContainer.innerHTML = ""; 
+    
+    if (membershipLevel === "NP") {
+        // No hay beneficios para la membresía sin fines de lucro
+        benefitsContainer.innerHTML = `
+            <p><strong>Non Profit Membership: </strong></p><br>
+            <ul>
+                <li>- Access to select events.</li><br>
+                <li>- Member Directory.</li><br>
+                <li>- Basic online resources.</li><br>
+                <li>- Newsletter.</li><br>
+            </ul>
+        `;
+    } else if (membershipLevel === "Bronze") {
+        benefitsContainer.innerHTML = `
+            <p><strong>🥉 Bronze Membership:</strong></p><br>
+            <ul>
+                <li>- All the benefits of the free membership.</li><br>
+                <li>- Discounts on selected services.</li><br>
+                <li>- Descuentos en servicios.</li><br>
+                <li>- More detailed newsletter.</li><br>
+            </ul>
+        `;
+    } else if (membershipLevel === "Silver") {
+        benefitsContainer.innerHTML = `
+            <p><strong>🥈 Silver Membership:</strong></p><br>
+            <ul>
+                <li>- All the benefits of the bronze membership.</li><br>
+                <li>- Additional advertising and promotion.</li><br>
+                <li>- Access to more detailed market data.</li><br>
+                <li>- Participation in specific committees.</li><br>
+            </ul>
+        `;
+    } else if (membershipLevel === "Gold") {
+        benefitsContainer.innerHTML = `
+            <p><strong>🥇 Gold Membership:</strong></p><br>
+            <ul>
+                <li>- All the benefits of the bronze and silver membership.</li><br>
+                <li>- VIP access to exclusive events.</li><br>
+                <li>- Personalized counseling sessions.</li><br>
+                <li>- Representation before the government and lobby.</li><br>
+            </ul>
+        `;
+    }
+}
+
+// Establecer la fecha/hora actual en el campo de entrada oculto
+document.getElementById("submission-time").value = Date.now();
+

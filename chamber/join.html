@@ -26,7 +26,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="discover.html">Discover</a></li>
               <li><a href="#directory">Directory</a></li>
-              <li><a href="join.html">Join</a></li>
+              <li><a href="#join">Join</a></li>
             </ul>
         </nav>
     </header>
@@ -36,69 +36,63 @@
     <section id="title">
         <p>Official Madrid Chamber of Commerce</p>
     </section>
-    <div id="hero">
-        <!-- <div id="hero-box"> -->
+    <!-- <div id="hero">
+        <div id="hero-box"> -->
             <!-- <img id="hero-img" src="images/heroC.jpg" alt="hero image"> -->
-            <picture>
+            <!-- <picture>
                 <source srcset="images/wdd230-org_small.webp" media="(max-width: 500px)">
                 <source srcset="images/wdd230-org_medium.webp" media="(max-width: 1000px)">
                 <img id="hero-img" src="images/wdd230-org_large.webp" alt="Responsive Hero" width="1500" height="750">
-            </picture>
-        <!-- </div> -->
-    </div>
-    <main class="home-grid">
-        <section class="title1">
-            <h2>More searches</h2>
-        </section>
-        <!-- <div class="w3-content w3-display-container w3-mobile-only"> -->
-            <div class="mySlides1">
-                <section class="card1">
-                    <img class="img1" src="images/card1.webp" alt="">
-                    <a class="button1" href="#">More info</a>
-                </section>
+            </picture> -->
+            <img class="image-join" src="images/join.webp" alt="join image">
+        <!-- </div>
+    </div> -->
+    <h1 class="title-join">Join Us</h1>
+    <main class="join">
+        
+        <form class="formjoin" action="thankyou.html" method="get">
+            <p class="subtitle">Personal Information</p>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required><br><br>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required><br><br>
+
+            <label for="title">Title/Position:</label>
+            <input type="text" id="position" name="title" required pattern="[A-Za-z\- ]{7,}"><br><br>
+
+            <p class="subtitle">Contact Information</p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="example@domain.com"><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="organization">Organization:</label>
+            <input type="text" id="organization" name="organization" required><br><br>
+            
+            <p class="subtitle">Membership </p>
+            <label for="membership-level">Membership:</label>
+            <select id="membership-level" name="membership-level" required onchange="showBenefits()">
+              <option value="Select">Select Membership</option>
+                <option value="NP">Non-Profit (Free)</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
+            </select><br><br>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+            <!-- element hidden -->
+            <input type="hidden" id="submission-time" name="submission-time">
+            
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="membership-benefits">
+            <p id="mb">Membership Benefits</p>
+            <div id="benefits-container">
+                <!-- Aquí se mostrarán los beneficios -->
             </div>
-            <div class="mySlides2">
-                <section class="card2">
-                    <img class="img2" src="images/card2.webp" alt="">
-                    <a class="button2" href="#">More info</a>
-                </section>
-            </div>
-            <div class="mySlides3">
-                <section class="card3">
-                    <img class="img3" src="images/card3.webp" alt="">
-                    <a class="button3" href="#">More info</a>
-                </section>
-            </div>
-            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle">
-                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-            </div>
-        <!-- </div> -->
-        <section class="title2">
-            <h2>News</h2>
-        </section>
-        <section class="new1">
-            <a href="#">
-                <img class="imgnew1" src="images/new1.webp" alt="">
-                <h3>more employment last year</h3>
-            </a>
-        </section>
-        <section class="new2">
-            <a href="#">
-                <img class="imgnew2" src="images/new2.webp" alt="">
-                <h3>Women in the commercial industry</h3>
-            </a>
-        </section>
-        <section class="weather-card">
-            <h3>Weather</h3>
-            <p>Madrid - Spain</p>
-            <p id="temperature">51.8</p> 
-            <p id="windSpeed">10</p> 
-            <p id="windChill"></p>
-        </section>
+        </div>
     </main>
     <footer>
         <p>&copy; <span id="year"></span> 
