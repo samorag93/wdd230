@@ -58,7 +58,7 @@
             <label for="last-name">Last Name:</label>
             <input type="text" id="last-name" name="last-name" required><br><br>
 
-            <label for="title">Title/Position:</label>
+            <label for="position">Title/Position:</label>
             <input type="text" id="position" name="title" required pattern="[A-Za-z\- ]{7,}"><br><br>
 
             <p class="subtitle">Contact Information</p>
@@ -74,7 +74,7 @@
             <p class="subtitle">Membership </p>
             <label for="membership-level">Membership:</label>
             <select id="membership-level" name="membership-level" required onchange="showBenefits()">
-              <option value="Select">Select Membership</option>
+                <option value="">Select Option</option>
                 <option value="NP">Non-Profit (Free)</option>
                 <option value="Bronze">Bronze</option>
                 <option value="Silver">Silver</option>
@@ -84,7 +84,7 @@
             <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
             <!-- element hidden -->
             <input type="hidden" id="submission-time" name="submission-time">
-            
+
             <button type="submit">Send Message</button>
         </form>
         <div class="membership-benefits">
