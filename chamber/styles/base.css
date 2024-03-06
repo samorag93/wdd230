@@ -459,7 +459,27 @@ button[type="submit"]:hover {
     font-weight: bold;
 }
 
+/* directory page */
 
+#cards img {
+    max-width: 325px;
+    box-shadow: 0 0 30px #777;
+    height: 400px;
+}
 
+.directory {
+    text-align: center;
+}
 
-
+.viewButtons button{
+    margin: 15px;
+    border:1px solid white;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.viewButtons img {
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+}

@@ -25,13 +25,15 @@
         if (modeButton.textContent.includes("🕶️")) {
             main.style.background = "black";
             main.style.color = "white";
-            form.style.background = "black"
             modeButton.textContent = "🔆";
+            form.style.background = "black"
+            
         } else {
             main.style.background = "white";
             main.style.color = "black";
-            form.style.background = "#eceaea"
             modeButton.textContent = "🕶️";
+            form.style.background = "#eceaea"
+            
         }
     });
 
@@ -156,4 +158,47 @@ function showBenefits() {
 
 // Establecer la fecha/hora actual en el campo de entrada oculto
 document.getElementById("submission-time").value = Date.now();
+
+//get json data
+
+const url = 'data/members.json';
+const cards = document.querySelector('#cards');
+
+const getMembersData = async () => {
+    try {
+      const response = await fetch(url);
+      const data = await response.json(); // Convierte la respuesta a JSON
+      displayProphets(data.companies); // Llama a la función displayProphets con la matriz de profetas como argumento
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+};
+
+const displayMembers = (members) => {
+    members.forEach((member) => {
+        let card = document.createElement('section');
+        let name = document.createElement('h2'); // Crear elemento para el nombre
+        let image = document.createElement('img');
+        let address = document.createElement('p'); // Crear elemento para la dirección
+        let phone = document.createElement('p');
+        name.textContent = member.name; // Establecer el texto del nombre
+        image.setAttribute('src', member.image); // Establecer la fuente de la imagen
+        image.setAttribute('alt', `Image of ${member.name}`); // Establecer el atributo alt de la imagen
+        image.setAttribute('loading', 'lazy');
+        image.setAttribute('width', '200');
+        image.setAttribute('height', '200');
+
+        address.textContent = `Address: ${member.address}`; // Establecer el texto de la dirección
+        phone.textContent = `Phone: ${member.phone}`; // Establecer el texto del teléfono
+
+        card.appendChild(name); // Agregar el nombre al card
+        card.appendChild(image); // Agregar la imagen al card
+        card.appendChild(address); // Agregar la dirección al card
+        card.appendChild(phone); // Agregar el teléfono al card
+
+        cards.appendChild(card);
+    });
+};
+
+getMembersData();
 
