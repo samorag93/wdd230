@@ -1,25 +1,25 @@
 
-    document.addEventListener('DOMContentLoaded', function () {
+
+document.addEventListener('DOMContentLoaded', function () {
         // Copyright year
-        var currentYear = new Date().getFullYear();
-        document.getElementById('year').textContent = currentYear;
+    var currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear;
 
         // Last modified date
-        var lastModifiedDate = document.lastModified;
-        document.getElementById('lastModified').textContent = 'Last modified: ' + lastModifiedDate;
-    });
+    var lastModifiedDate = document.lastModified;
+    document.getElementById('lastModified').textContent = 'Last modified: ' + lastModifiedDate;
+});
 
-    const mainnav = document.querySelector('.navigation')
-    const hambutton = document.querySelector('#menu');
+const mainnav = document.querySelector('.navigation')
+const hambutton = document.querySelector('#menu');
 
-    hambutton.addEventListener('click', () => {
-        mainnav.classList.toggle('show');
-        hambutton.classList.toggle('show');
-    });
-
-    const modeButton = document.querySelector("#mode");
-    const main = document.querySelector("main");
-    const form = document.querySelector(".formjoin");
+hambutton.addEventListener('click', () => {
+    mainnav.classList.toggle('show');
+    hambutton.classList.toggle('show');
+});
+const modeButton = document.querySelector("#mode");
+const main = document.querySelector("main");
+const form = document.querySelector(".formjoin");
 
     modeButton.addEventListener("click", () => {
         if (modeButton.textContent.includes("🕶️")) {
@@ -35,7 +35,7 @@
             form.style.background = "#eceaea"
             
         }
-    });
+});
 
 
 
@@ -62,7 +62,7 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
-// Abrir y cerrar el modal
+  // Abrir y cerrar el modal
 document.addEventListener("DOMContentLoaded", function() {
   let modal = document.getElementById("myModal");
   let modalMessage = document.getElementById("modal-message");
@@ -161,44 +161,6 @@ document.getElementById("submission-time").value = Date.now();
 
 //get json data
 
-const url = 'data/members.json';
-const cards = document.querySelector('#cards');
 
-const getMembersData = async () => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json(); // Convierte la respuesta a JSON
-      displayProphets(data.companies); // Llama a la función displayProphets con la matriz de profetas como argumento
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-};
 
-const displayMembers = (members) => {
-    members.forEach((member) => {
-        let card = document.createElement('section');
-        let name = document.createElement('h2'); // Crear elemento para el nombre
-        let image = document.createElement('img');
-        let address = document.createElement('p'); // Crear elemento para la dirección
-        let phone = document.createElement('p');
-        name.textContent = member.name; // Establecer el texto del nombre
-        image.setAttribute('src', member.image); // Establecer la fuente de la imagen
-        image.setAttribute('alt', `Image of ${member.name}`); // Establecer el atributo alt de la imagen
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '200');
-        image.setAttribute('height', '200');
-
-        address.textContent = `Address: ${member.address}`; // Establecer el texto de la dirección
-        phone.textContent = `Phone: ${member.phone}`; // Establecer el texto del teléfono
-
-        card.appendChild(name); // Agregar el nombre al card
-        card.appendChild(image); // Agregar la imagen al card
-        card.appendChild(address); // Agregar la dirección al card
-        card.appendChild(phone); // Agregar el teléfono al card
-
-        cards.appendChild(card);
-    });
-};
-
-getMembersData();
 

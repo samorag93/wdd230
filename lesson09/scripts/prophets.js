@@ -5,6 +5,7 @@ const getProphetData = async () => {
   try {
     const response = await fetch(url);
     const data = await response.json(); // Convierte la respuesta a JSON
+    console.log(data); 
     displayProphets(data.prophets); // Llama a la función displayProphets con la matriz de profetas como argumento
   } catch (error) {
     console.error('Error fetching data:', error);

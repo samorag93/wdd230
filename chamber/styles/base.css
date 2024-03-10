@@ -460,15 +460,15 @@ button[type="submit"]:hover {
 }
 
 /* directory page */
-
-#cards img {
-    max-width: 325px;
-    box-shadow: 0 0 30px #777;
-    height: 400px;
-}
-
 .directory {
     text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    background-color: #f4f4f4;
+    gap: 15px;
 }
 
 .viewButtons button{
@@ -482,4 +482,70 @@ button[type="submit"]:hover {
     width: 30px;
     justify-content: center;
     align-items: center;
+}
+
+.grid h2, .list h2 {
+    margin: 10px;
+}
+
+.grid img, .grid section {
+    box-shadow: 0  0 10px #333;
+}
+
+.directory section {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    background-color: #eee;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+    margin: 100px;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+    font-size: 15px;
+    justify-self: center;
+    align-items: center;
+    /* align-self: center; */
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+.website {
+    text-decoration: none;
+    color: black;
+}
+
+.list section:nth-child(even) {
+	background-color: white;
+    
+}
+
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+        margin: 40px;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+    }
+    .list section {
+        display: flex;
+        flex-direction: column;
+        /* font-size: 13px; */
+    }
+        
 }
