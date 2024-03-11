@@ -1,11 +1,11 @@
 {
     "companies": [
       {
-        "name": "Company A",
+        "name": "ENAE Business School",
         "address": "123 Main Street, City, Country",
-        "phone": "+123456789",
-        "website": "https://www.company-a.com",
-        "image": "https://picsum.photos/200/300?random=1",
+        "phone": "+34 968 899 899",
+        "website": "https://www.enae.es",
+        "image": "data/ENAE.png",
         "membership_level": "Premium",
         "other_information": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
