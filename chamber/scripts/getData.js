@@ -27,7 +27,7 @@ const displayMembers = (companies) => {
     image.setAttribute("alt", `Image of ${member.name}`); // Establecer el atributo alt de la imagen
     image.setAttribute("loading", "lazy");
     image.setAttribute("width", "200");
-    image.setAttribute("height", "200");
+    image.setAttribute("height", "100");
 
     address.textContent = `${member.address}`; // Establecer el texto de la dirección
     phone.textContent = `${member.phone}`; // Establecer el texto del teléfono
