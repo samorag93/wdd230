@@ -126,6 +126,10 @@ ul {
     list-style-type: none;
 }
 
+.card p img {
+    vertical-align: bottom;
+}
+
 footer {
     background-color: #1d4d72; 
     color: white; 
