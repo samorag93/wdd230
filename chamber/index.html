@@ -30,6 +30,11 @@
             </ul>
         </nav>
     </header>
+    
+    <div id="banner" class="banner">
+        <p>Attend the chamber of commerce meeting this Wednesday at 7:00 p.m.!</p>
+    </div>
+    
     <div id="mode">
         🕶️
     </div>
@@ -83,7 +88,7 @@
         <section class="new1">
             <a href="#">
                 <img class="imgnew1" src="images/new1.webp" alt="">
-                <h3>more employment last year</h3>
+                <h3>More employment last year</h3>
             </a>
         </section>
         <section class="new2">
@@ -94,10 +99,37 @@
         </section>
         <section class="weather-card">
             <h3>Weather</h3>
-            <p>Madrid - Spain</p>
-            <p id="temperature">51.8</p> 
-            <p id="windSpeed">10</p> 
-            <p id="windChill"></p>
+            <h4 id="city-name">Madrid - ES</h4>
+            <p id="date"></p>
+            <img id="weather-icon" src="" alt="Weather Icon">
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="wind-speed"></p>
+            <p id="windchill"></p>
+            <hr>
+            <section class="forecast-card">
+                <h4 class="forecast-title">3-Day Forecast</h4>
+                <div class="forecast-days">
+                  <div class="forecast-day">
+                    <h4 id="forecast-day-0"></h4>
+                    <img id="forecast-icon-0" src="" alt="Weather Icon">
+                    <p id="forecast-temp-0"></p>
+                    <p id="forecast-description-0"></p>
+                  </div>
+                  <div class="forecast-day">
+                    <h4 id="forecast-day-1"></h4>
+                    <img id="forecast-icon-1" src="" alt="Weather Icon">
+                    <p id="forecast-temp-1"></p>
+                    <p id="forecast-description-1"></p>
+                  </div>
+                  <div class="forecast-day">
+                    <h4 id="forecast-day-2"></h4>
+                    <img id="forecast-icon-2" src="" alt="Weather Icon">
+                    <p id="forecast-temp-2"></p>
+                    <p id="forecast-description-2"></p>
+                  </div>
+                </div>
+              </section>
         </section>
     </main>
     <footer>
@@ -119,7 +151,9 @@
             </a>
         </div>
     </footer>
+    <script src="scripts/weather.js"></script>
     <script src="scripts/scripts.js" ></script>
-    <script src="scripts/windchill.js"></script>
+    <!-- <script src="scripts/windchill.js"></script> -->
+    <script src="scripts/banner.js"></script>
 </body>
 </html>
