@@ -2,7 +2,7 @@ const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
 // 40.2323744119189, -3.7680240636521325
-                                                                // 40.41274718629942, -3.70427024156695
+// 40.41274718629942, -3.70427024156695
 // const url = 'https://api.openweathermap.org/data/2.5/weather?lat=40.23&lon=-3.77&units=imperial&appid=11e47217061cf08187ac30206bdc7206';
 const url = 'https://api.openweathermap.org/data/2.5/weather?lat=40.41&lon=-3.70&units=imperial&appid=11e47217061cf08187ac30206bdc7206';
 

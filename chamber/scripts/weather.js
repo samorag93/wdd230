@@ -166,6 +166,7 @@
 const url = 'https://api.openweathermap.org/data/2.5/weather';
 const apiKey = '11e47217061cf08187ac30206bdc7206';
 
+
 function calculateWindChill(temp, windSpeed) {
     const T = (temp * 9/5) + 32; // Convert temperature to Fahrenheit
     const V = windSpeed * 2.237; // Convert wind speed to miles per hour
