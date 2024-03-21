@@ -17,22 +17,28 @@ hambutton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');
 });
+
+
 const modeButton = document.querySelector("#mode");
 const main = document.querySelector("main");
 const form = document.querySelector(".formjoin");
+const sidebar = document.querySelector(".sidebar")
+
 
     modeButton.addEventListener("click", () => {
         if (modeButton.textContent.includes("🕶️")) {
             main.style.background = "black";
             main.style.color = "white";
+            sidebar.style.background = "black";
             modeButton.textContent = "🔆";
-            form.style.background = "black"
-            
+            form.style.background = "black";
         } else {
             main.style.background = "white";
             main.style.color = "black";
+            sidebar.style.background = "#f0f0f0";
             modeButton.textContent = "🕶️";
             form.style.background = "#eceaea"
+            
             
         }
 });
@@ -160,7 +166,4 @@ function showBenefits() {
 document.getElementById("submission-time").value = Date.now();
 
 //get json data
-
-
-
 

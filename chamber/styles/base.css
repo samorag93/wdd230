@@ -7,6 +7,10 @@
 	box-sizing: border-box;
 }
 
+body{
+    position: relative;
+}
+
 nav ul {
     display: flex;
     justify-content: end;
@@ -59,6 +63,9 @@ ul {
 .logo {
     width: 100px;
 }
+
+
+
 
 .hero {
     width: 100%;
@@ -226,6 +233,34 @@ footer a {
 
 /* Discover page */
 
+.main-discover {
+    position: relative;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+    background-color: #f0f0f0;
+    /* padding: 20px; */    
+}
+
+.sidebar img {
+    width: 400px;
+    height: 400px;
+}
+.sidebar {
+    text-align: center;
+}
+
+
+.main-content {
+    margin-left: 420px; 
+}
+
+
 .modal {
     display: none;
     position: fixed;
@@ -368,6 +403,14 @@ li img:hover {
           flex: 1 0 100%;
           margin-right: 0;
     }
+    .sidebar {        
+        width: 0;
+        overflow: hidden;
+    }
+    .main-content {
+        margin-left: 0;
+        margin: 20px;
+    }
 }
 
 /* join page */
@@ -459,7 +502,7 @@ button[type="submit"]:hover {
 
 .title-join {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; 

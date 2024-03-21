@@ -16,6 +16,7 @@
     <meta property="og:url" content="https://samorag93.github.io/wdd230/chamber/index.html">
 </head>
 <body>
+    
     <header>
         <a id="logo_link" href="index.html">
             <img class="logo" src="images/Chamber_of_commerce_of_madridlogo.webp" alt="Chamber logo">
@@ -33,62 +34,78 @@
     <div id="mode">
         🕶️
     </div>
-    <main>
-        <div id="slideshow-container">
-            <img class="slideshow-img" src="images/disc_hero.webp" alt="Slideshow Image 1">
-            <img class="slideshow-img" src="images/disc_hero2.webp" alt="Slideshow Image 2">
-            <img class="slideshow-img" src="images/disc_hero3.webp" alt="Slideshow Image 3">
-            <img class="slideshow-img" src="images/disc_hero4.webp" alt="Slideshow Image 4">
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <main class="main-discover">
+        <div class="sidebar">
+            <!-- Aquí puedes agregar contenido para el sidebar, como datos demográficos, estadísticas, eventos, etc. -->
+            <h2>Discover More</h2>
+            <p>Statistics</p><br>
+            <img class="statistics" src="images/Entrepreneurship.png" alt="Statistics">
+            <p>Calendar</p><br>
+            <a href="https://calendar.google.com/calendar/embed?src=1527d22c2eb0e235edf6c11ceae26dd450b1724e24bc251d4fe5691f5c317a64%40group.calendar.google.com&ctz=Europe%2FAmsterdam"><img src="images/calendar.webp.png" alt="Chamber of Commerce Calendar"></a>
+            <p>Next Events</p><br>
+            <a class="event">04/04</a>
+            <p>SUSTAINABILITY: NEW INFORMATION REQUIREMENTS FOR MADRID COMPANIES</p>
+            <hr><br>
+            <a class="event">06/04</a>
+            <p>INTERNATIONAL SECURITY DAY. PROTECT YOUR WORKERS DURING THEIR MOVEMENTS ABROAD</p>
         </div>
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="modal-message"></p>
+        <div class="main-content">
+            <div id="slideshow-container">
+                <img class="slideshow-img" src="images/disc_hero.webp" alt="Slideshow Image 1">
+                <img class="slideshow-img" src="images/disc_hero2.webp" alt="Slideshow Image 2">
+                <img class="slideshow-img" src="images/disc_hero3.webp" alt="Slideshow Image 3">
+                <img class="slideshow-img" src="images/disc_hero4.webp" alt="Slideshow Image 4">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="modal-message"></p>
+                </div>
+            </div>
+            <h1>Discover Your Next Step</h1>
+            <section id="upcoming-events">
+                <ul>
+                    <li>
+                        <img src="images/disc_card1.webp" alt="Imagen 1" loading="lazy">
+                        <div class="content">
+                            <p>Conference, Convention, & Summit Sessions</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/disc_card2.webp" alt="Imagen 2" loading="lazy">
+                        <div class="content">
+                            <p>Webinar Recordings</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/disc_card3.webp" alt="Imagen 3" loading="lazy">
+                        <div class="content">
+                            <p>CEE Certification</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/disc_card4.webp" alt="Imagen 4" loading="lazy">
+                        <div class="content">
+                            <p>eCourses and Publications</p>
+                        </div>
+                    </li>
+                    <li class="conference">
+                        <a href="https://calendar.google.com/calendar/embed?src=1527d22c2eb0e235edf6c11ceae26dd450b1724e24bc251d4fe5691f5c317a64%40group.calendar.google.com&ctz=Europe%2FAmsterdam"><img src="images/disc_card5.webp" alt="Imagen 5" loading="lazy"></a>
+                        <div class="content">
+                            <p>Upcoming Events</p>
+                        </div>
+                    </li>
+                    <li class="eCourses">
+                        <img src="images/disc_card6.webp" alt="Imagen 6" loading="lazy">
+                        <div class="content">
+                            <p>Division and Community Peer Group Resources</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
         </div>
-        <h1>Discover Your Next Step</h1>
-        <section id="upcoming-events">
-            <ul>
-                <li>
-                    <img src="images/disc_card1.webp" alt="Imagen 1" loading="lazy">
-                    <div class="content">
-                        <p>Conference, Convention, & Summit Sessions</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="images/disc_card2.webp" alt="Imagen 2" loading="lazy">
-                    <div class="content">
-                        <p>Webinar Recordings</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="images/disc_card3.webp" alt="Imagen 3" loading="lazy">
-                    <div class="content">
-                        <p>CEE Certification</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="images/disc_card4.webp" alt="Imagen 4" loading="lazy">
-                    <div class="content">
-                        <p>eCourses and Publications</p>
-                    </div>
-                </li>
-                <li class="conference">
-                    <img src="images/disc_card5.webp" alt="Imagen 5" loading="lazy">
-                    <div class="content">
-                        <p>Upcoming Events</p>
-                    </div>
-                </li>
-                <li class="eCourses">
-                    <img src="images/disc_card6.webp" alt="Imagen 6" loading="lazy">
-                    <div class="content">
-                        <p>Division and Community Peer Group Resources</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
     </main>
     <footer>
         <p>&copy; <span id="year"></span> 

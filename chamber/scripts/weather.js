@@ -229,6 +229,7 @@ function getForecast(city) {
 function displayForecast(forecast) {
   const today = new Date();
   const tomorrow = new Date();
+  today.setDate(today.getDate() + 1);
   tomorrow.setDate(today.getDate() + 2);
   const dayAfterTomorrow = new Date();
   dayAfterTomorrow.setDate(today.getDate() + 3);
