@@ -21,6 +21,7 @@ const displayMembers = (companies) => {
     let address = document.createElement("p"); // Crear elemento para la dirección
     let website = document.createElement("a");
     let phone = document.createElement("p");
+    let memberShip = document.createElement("p");
     
     name.textContent = member.name; // Establecer el texto del nombre
     image.setAttribute("src", member.image); // Establecer la fuente de la imagen
@@ -31,6 +32,7 @@ const displayMembers = (companies) => {
 
     address.textContent = `${member.address}`; // Establecer el texto de la dirección
     phone.textContent = `${member.phone}`; // Establecer el texto del teléfono
+    memberShip.textContent = `${member.membership_level} Membership`;
     website.innerHTML = `More Details`; // Establecer el enlace al sitio web
     website.setAttribute("class",`website`)
     website.setAttribute("href",member.website)
@@ -38,6 +40,7 @@ const displayMembers = (companies) => {
     card.appendChild(image); // Agregar la imagen al card
     card.appendChild(address); // Agregar la dirección al card
     card.appendChild(phone); // Agregar el teléfono al card
+    card.appendChild(memberShip);
     card.appendChild(website);
 
     cards.appendChild(card);
