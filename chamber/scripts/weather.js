@@ -249,3 +249,70 @@ function displayForecast(forecast) {
 }
 
 getForecast('Madrid');
+
+const url3 =
+  "https://raw.githubusercontent.com/samorag93/wdd230/main/chamber/data/members.json";
+const displayGoldMembers = async () => {
+  const gold_card = document.querySelector(".gold_members");
+
+  try {
+    const response = await fetch(url3);
+    const data = await response.json(); // Convierte la respuesta a JSON
+
+    const goldMembers = data.companies.filter(
+      (member) => member.membership_level === "Gold"
+    );
+    const silverMembers = data.companies.filter(
+      (member) => member.membership_level === "Silver"
+    );
+
+    // Crear una lista combinada de miembros gold y silver
+    const combinedMembers = [...goldMembers, ...silverMembers];
+
+    // Obtener al menos 3 miembros aleatorios
+    const randomMembers = getRandomMembers(combinedMembers, 3);
+
+    // Mostrar los miembros seleccionados
+    randomMembers.forEach((selectedMember) => {
+      let card = document.createElement("section");
+      let name = document.createElement("h2");
+      let image = document.createElement("img");
+      let address = document.createElement("p");
+      let website = document.createElement("a");
+      let phone = document.createElement("p");
+      let memberShip = document.createElement("p");
+
+      name.textContent = selectedMember.name;
+      image.setAttribute("src", selectedMember.image);
+      image.setAttribute("alt", `Image of ${selectedMember.name}`);
+      image.setAttribute("loading", "lazy");
+      image.setAttribute("width", "200");
+      image.setAttribute("height", "100");
+      address.textContent = `${selectedMember.address}`;
+      phone.textContent = `${selectedMember.phone}`;
+      memberShip.textContent = `${selectedMember.membership_level} Membership`;
+      website.innerHTML = `More Details`;
+      website.setAttribute("class", "website");
+      website.setAttribute("href", selectedMember.website);
+
+      card.appendChild(name);
+      card.appendChild(image);
+      card.appendChild(address);
+      card.appendChild(phone);
+      card.appendChild(memberShip);
+      card.appendChild(website);
+
+      gold_card.appendChild(card);
+    });
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+
+// Función para seleccionar miembros aleatorios
+const getRandomMembers = (members, count) => {
+  const shuffledMembers = members.sort(() => 0.5 - Math.random());
+  return shuffledMembers.slice(0, count);
+};
+
+displayGoldMembers();

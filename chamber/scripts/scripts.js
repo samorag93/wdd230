@@ -30,9 +30,12 @@ const msg = document.querySelector(".msg")
         if (modeButton.textContent.includes("🕶️")) {
             modeButton.textContent = "🔆";
             main.style.background = "black";
-            main.style.color = "white";            
-            sidebar.style.background = "black";
+            main.style.color = "white";  
             form.style.background = "black";
+            // form.style.color ="black";          
+            sidebar.style.background = "black";
+            sidebar.style.color = "black"
+            
             msg.style.background = "black"
             
             
@@ -61,9 +64,14 @@ function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
 function showSlides(n) {
     let i;
     const slides = document.getElementsByClassName("slideshow-img");
+    const dots = document.getElementsByClassName("dot");
     if (n > slides.length) {
         slideIndex = 1;
     }
@@ -73,7 +81,11 @@ function showSlides(n) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
     slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex-1].className += " active";
 }
 
   // Abrir y cerrar el modal
