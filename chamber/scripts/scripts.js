@@ -23,26 +23,34 @@ const modeButton = document.querySelector("#mode");
 const main = document.querySelector("main");
 const form = document.querySelector(".formjoin");
 const sidebar = document.querySelector(".sidebar")
+const msg = document.querySelector(".msg")
 
 
     modeButton.addEventListener("click", () => {
         if (modeButton.textContent.includes("🕶️")) {
-            main.style.background = "black";
-            main.style.color = "white";
-            sidebar.style.background = "black";
             modeButton.textContent = "🔆";
+            main.style.background = "black";
+            main.style.color = "white";            
+            sidebar.style.background = "black";
             form.style.background = "black";
+            msg.style.background = "black"
+            
+            
         } else {
+            modeButton.textContent = "🕶️";
             main.style.background = "white";
             main.style.color = "black";
             sidebar.style.background = "#f0f0f0";
-            modeButton.textContent = "🕶️";
+            msg.style.background = "#eceaea"
             form.style.background = "#eceaea"
-            
             
         }
 });
 
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+ }
 
 
 

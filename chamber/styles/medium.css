@@ -8,6 +8,7 @@
   padding: .5rem .75rem;
   background-color: #eee;
   color: #000;
+  justify-content: left;
 }
   
 #menu::before {
@@ -27,7 +28,7 @@
   display: block;
 }  
 
-.navigation a:hover, navigation a:active {
+.navigation a:hover, .navigation a:active {
   color: black;
   background-color: rgb(88, 86, 86);
 }
@@ -49,21 +50,14 @@ nav li a::before {
   margin-right: 5px;
 }
 
-.mySlides1, .mySlides2, .mySlides3 {
-  display:none
-}
-
-.w3-left, .w3-right, .w3-badge {
-  cursor:pointer; 
-  display: none;
-}
-
 
 
 @media (min-width: 600px) {
   body {
     font-size: 18px;
   }
+
+  
       
   nav li a::before {
     content:none;

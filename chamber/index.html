@@ -42,62 +42,21 @@
         <h1>Official Madrid Chamber of Commerce</h1>
     </section>
     <div id="hero">
-        <!-- <div id="hero-box"> -->
-            <!-- <img id="hero-img" src="images/heroC.jpg" alt="hero image"> -->
             <picture>
-                <source srcset="images/hero_small.webp" media="(max-width: 500px)">
-                <source srcset="images/hero_medium.webp" media="(max-width: 1000px)">
-                <img id="hero-img" src="images/heroC.jpg" alt="Responsive Hero" width="1500" height="750">
+                <source srcset="https://raw.githubusercontent.com/samorag93/wdd230/main/chamber/images/hero_small.webp" media="(max-width: 500px)">
+                <source srcset="https://raw.githubusercontent.com/samorag93/wdd230/main/chamber/images/hero_medium.webp" media="(max-width: 1000px)">
+                <img id="hero-img" src="images/heroC.jpg" alt="Responsive Hero" width="1500">
             </picture>
-        <!-- </div> -->
     </div>
     <main class="home-grid">
-        <section class="title1">
-            <h2>More searches</h2>
-        </section>
-        <!-- <div class="w3-content w3-display-container w3-mobile-only"> -->
-            <div class="mySlides1">
-                <section class="card1">
-                    <img class="img1" src="images/card1.webp" alt="">
-                    <a class="button1" href="#">More info</a>
-                </section>
+        <section class="welcome">
+            <div class="welcome-text">
+                <h2>Welcome to the Madrid Chamber of Commerce</h2><br>
+                <p>An institution at the service of companies, self-employed workers and entrepreneurs in our territorial demarcation, to whom we provide support in various areas of their activity: training, internationalization, innovation, new technologies, employment, etc.
+    
+                    Our reason for being and our commitment is to promote the economic and social development of the Region of Murcia, through service to our companies.</p>
             </div>
-            <div class="mySlides2">
-                <section class="card2">
-                    <img class="img2" src="images/card2.webp" alt="">
-                    <a class="button2" href="#">More info</a>
-                </section>
-            </div>
-            <div class="mySlides3">
-                <section class="card3">
-                    <img class="img3" src="images/card3.webp" alt="">
-                    <a class="button3" href="#">More info</a>
-                </section>
-            </div>
-            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle">
-                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-            </div>
-        <!-- </div> -->
-        <section class="title2">
-            <h2>News</h2>
-        </section>
-        <section class="new1">
-            <a href="#">
-                <img class="imgnew1" src="images/new1.webp" alt="">
-                <h3>More employment last year</h3>
-            </a>
-        </section>
-        <section class="new2">
-            <a href="#">
-                <img class="imgnew2" src="images/new2.webp" alt="">
-                <h3>Women in the commercial industry</h3>
-            </a>
-        </section>
-        <section class="weather-card">
+            <section class="weather-card">
             <h3>Weather</h3>
             <h4 id="city-name">Madrid - ES</h4>
             <p id="date"></p>
@@ -130,7 +89,86 @@
                   </div>
                 </div>
               </section>
+            </section>
         </section>
+        <div class="container">
+            <div class="area" >
+                <h3 class="text-content">Training</h3>
+            </div>
+            <div class="area" >
+                <h3 class="text-content">International</h3>
+            </div>
+            <div class="area" >
+                <h3 class="text-content">Digital transformation</h3>
+            </div>
+            <div class="area">
+                <h3 class="text-content">Formalities</h3>
+            </div>
+            <div class="area">
+                <h3 class="text-content">Undertake</h3>
+            </div>
+            <div class="area">
+                <h3 class="text-content">Self-employed</h3>
+            </div>
+            <div class="area">
+                <h3 class="text-content">European projects</h3>
+            </div>
+            <div class="area">
+                <h3 class="text-content">Studies</h3>
+            </div>
+            <div class="area">
+                <h3 class="text-content">Commerce and Tourism</h3>
+            </div>
+            <div class="area">
+                <h3 class="text-content">Innovation</h3>
+            </div>
+            <div class="area">
+                <h3 class="text-content">Advice</h3>
+            </div>
+            <div class="area">
+                <h3 class="text-content">Webinars</h3>
+            </div>
+            <div class="area">
+                <h3 class="text-content">Financing</h3>
+            </div>
+        </div>
+        <h2>Last News</h2>
+        <!--cards de noticias  -->
+        <div class="card-new">
+            <img class="image-news" src="images/chamberNews1.webp" alt="new 1">
+            <section class="msg">
+                <h3>BUSINESS CREATION</h3>
+                <p>The Community of Madrid has returned to the positive path of creation
+                    of new companies in the region. According to data from the National Institute
+                    of Statistics (INE), in the month of January 4.9% more jobs were created
+                    new companies, in an interannual rate, which represents up to 2,143 companies
+                    incorporated commercial companies. With these data, the region once again obtains
+                    positive figures after recording a decrease of 2.26% in December 2023.
+                    </p><br>
+                <a class="button1" href="#">More info</a>
+            </section>
+        </div>
+
+        <div class="card-new">
+            <img class="image-news" src="images/new2.webp" alt="new 1">
+            <section class="msg">
+                <h3>WORLD DAY OF WOMEN IN THE SCIENCE</h3>
+                <p>On the occasion of World Day of Women and Girls in Science, the Madrid Chamber of Commerce has called for greater support for women entrepreneurs and businesswomen in the field of science, technology, engineering and mathematics. In addition, it has called on public administrations and educational and business institutions to increase the presence of women in STEM environments, since only 16% of professionals in these areas are women.
+                    </p><br>
+                <a class="button1" href="#">More info</a>
+            </section>
+        </div>
+
+        <div class="card-new">
+            <img class="image-news" src="images/new1.webp" alt="new 1">
+            <section class="msg">
+                <h3>LESS UNEMPLOYED IN THE LAST YEAR</h3>
+                <p>In the fourth quarter of 2023, Madrid was the autonomous community that registered the largest annual decrease in unemployment, with 54,200 fewer unemployed, 13.05% less compared to the end of 2022.
+                    According to the Active Population Survey (EPA) published by the National Institute of Statistics (INE), the region reaches the figure of 361,000 unemployed, after the quarter from October to December registered a decrease in unemployment of 6.66%, with 25,800 fewer unemployed than in the previous quarter. For its part, the number of employed people increased in one year by 5.02% (+160,500) to reach 3,355,500 workers in 2023.
+                    </p><br>
+                <a class="button1" href="#">More info</a>
+            </section>
+        </div>
     </main>
     <footer>
         <p>&copy; <span id="year"></span> 
@@ -151,9 +189,9 @@
             </a>
         </div>
     </footer>
-    <script src="scripts/weather.js"></script>
     <script src="scripts/scripts.js" ></script>
-    <!-- <script src="scripts/windchill.js"></script> -->
+    <script src="scripts/weather.js"></script>    
+    <script src="scripts/windchill.js"></script>
     <script src="scripts/banner.js"></script>
 </body>
 </html>
