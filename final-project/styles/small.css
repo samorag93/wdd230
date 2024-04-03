@@ -84,9 +84,10 @@
     }
 
 	table {
-		width: auto;
+		width: 100%;
 		margin: 0;
 		padding: 100px;
+		font-size: 10px;
 	}
     table tr{
 		display: flex;
@@ -109,9 +110,12 @@
 	.contact-container {
 		grid-template-columns: 1fr;
 	}
+	.container {
+		grid-template-columns: 1fr;
+	}
 
 	.w3-modal-content {
 		/* margin: 5% auto; */
 		width: 90%;
-	  }
+	}
 }
