@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation - Scoot</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo_link" src="images/logo.png" alt="logo-image"></a>
+        <a id="menu" href="#"></a>
+    </header>
+    <nav>
+        <div class="link">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.png" alt="instagram"></a>
+            <a href="https://www.x.com"><img src="images/x.png" alt="X"></a>
+        </div>        
+    </nav>
+    <div id="banner" class="banner">
+        <span onclick="closebutton()" class="w3-button w3-display-topright close-btn">&times;</span>
+        <p id="temp-max"></p>
+    </div>
+    <main>
+        <div class="container">
+            <!-- Información del contrato de alquiler -->
+            <div id="contract-info-container"></div> <!-- Contenedor para cargar la información del contrato de alquiler -->
+            <!-- Formulario de reserva -->
+            <div id="reservation-form-container"></div> <!-- Contenedor para cargar el formulario de reserva -->
+        </div>
+        <!-- <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modal-message"></p>
+            </div>
+        </div> -->
+        <div id="id01" class="w3-modal" style="display: none;">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="closeModal()" class="w3-button w3-display-topright ">&times;</span>
+                    <p>Successful reservation, see you soon!</p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> 
+            por Scoots created by Moroni Aguilar</p>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/reservation.js"></script>
+    <script>
+        var modal = document.getElementById("myModal");
+        
+
+        var btn = document.getElementById("myBtn");
+        
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

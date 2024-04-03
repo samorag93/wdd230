@@ -1,0 +1,82 @@
+{
+    "max_rental_pricing": [
+      {
+        "rental_type": "Honda Metro Scooter",
+        "image" :"data/scooter_metro.png",
+        "max_persons": 1,
+        "reservation": {
+          "half_day (3hrs)": "$20",
+          "full_day": "$30"
+        },
+        "walk-in": {
+          "half_day (3hrs)": "$25",
+          "full_day": "$35"
+        }
+      },
+      {
+        "rental_type": "Honda Dio Scooter",
+        "image" :"data/scooter_dio.png",
+        "max_persons": 2,
+        "reservation": {
+          "half_day (3hrs)": "$30",
+          "full_day": "$40"
+        },
+        "walk-in": {
+          "half_day (3hrs)": "$35",
+          "full_day": "$45"
+        }
+      },
+      {
+        "rental_type": "Honda PCX150 Scooter",
+        "image" :"data/scooter_150.png",
+        "max_persons": 2,
+        "reservation": {
+          "half_day (3hrs)": "$40",
+          "full_day": "$50"
+        },
+        "walk-in": {
+          "half_day (3hrs)": "$45",
+          "full_day": "$55"
+        }
+      },
+      {
+        "rental_type": "Honda Pioneer ATV",
+        "image" :"data/scooter_atv.png",
+        "max_persons": 4,
+        "reservation": {
+          "half_day (3hrs)": "$50",
+          "full_day": "$70"
+        },
+        "walk-in": {
+          "half_day (3hrs)": "$60",
+          "full_day": "$80"
+        }
+      },
+      {
+        "rental_type": "Jeep Wrangler - 4 door with a/c",
+        "image" :"data/scooter_jeep4.webp",
+        "max_persons": 5,
+        "reservation": {
+          "half_day (3hrs)": "$70",
+          "full_day": "$100"
+        },
+        "walk-in": {
+          "half_day (3hrs)": "$85",
+          "full_day": "$125"
+        }
+      },
+      {
+        "rental_type": "Jeep Wrangler - 2 door",
+        "image" :"data/scooter_jeep2.png",
+        "max_persons": 4,
+        "reservation": {
+          "half_day (3hrs)": "$60",
+          "full_day": "$85"
+        },
+        "walk-in": {
+          "half_day (3hrs)": "$70",
+          "full_day": "$90"
+        }
+      }
+    ]
+  }

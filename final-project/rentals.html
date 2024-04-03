@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentals - Scoot</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo_link" src="images/logo.png" alt="logo-image"></a>
+        <a id="menu" href="#"></a>
+    </header>
+    <nav>
+        <div class="link">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.png" alt="instagram"></a>
+            <a href="https://www.x.com"><img src="images/x.png" alt="X"></a>
+        </div>        
+    </nav>
+    <div id="banner" class="banner">
+        <span onclick="closebutton()" class="w3-button w3-display-topright ">&times;</span>
+        <p id="temp-max"></p>
+    </div>
+    <main>
+        <table id="rentals-table">
+            <thead>
+                <tr class="table-title">
+                    <th colspan="7">Max Rental Pricing</th>
+                </tr>
+                <tr>                    
+                    <th></th>
+                    <th>Max. Persons</th>
+                    <th colspan="2">Reservation</th>
+                    <th colspan="2">Walk-In</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>Rental Type</th>
+                    <th></th>
+                    <th>Half Day (3hrs)</th>
+                    <th>Full Day</th>
+                    <th>Half Day (3hrs)</th>
+                    <th>Full Day</th>
+                    <th class="child"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos de la tabla se generarán dinámicamente desde JavaScript -->
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> 
+            por Scoots created by Moroni Aguilar</p>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/getPrices.js"></script>
+</body>
+</html>

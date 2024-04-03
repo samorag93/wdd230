@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.logo_link {
+    width: 80px;
+}
+header {
+    background-color: #06273a;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+nav a {
+    text-decoration: none;
+    padding: 15px;
+    color: black;
+    font-size: 25px;
+}
+.link a:hover {
+    background-color: #555;
+}
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social a img{
+    width: 30px;
+    padding: 10px;
+}
+
+#banner {
+    position: relative;
+    padding: 10px; 
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#banner::before {
+    /* content: "X"; */
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-box {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+.hero-img {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    width: 100%;
+    opacity: 0.8;    
+}
+.scoot-img{
+    width: 100%; 
+    height: auto;
+    max-height: 680px; 
+}
+.hero-msg {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    z-index: 1;
+    color: white;
+}
+.hero-msg h1 {
+    text-align: center;
+    font-size: 50px;
+}
+.hero-msg p {
+    background-color: transparent;
+    font-size: 20px;
+    grid-row: 2/3;
+}
+
+.weather-card {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+    background-color: #D8DBD8;
+    margin: 20px;
+    z-index: 1;
+}
+.current-weather {
+    opacity: 1;
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+.slide-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 100px;
+    text-align: center;
+    margin: 40px;
+    color: white;
+}
+main {
+    background-color: #06273a;
+}
+.services-img {
+    width: 100%;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+}
+
+.opening {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.open-text {
+    /* margin: 0; */
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.open-text a {
+    text-decoration: none;
+    color: white;
+}
+
+.open-image {
+    margin: 0;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.services:hover .hover-img {
+    display: block;
+    width: 100%;
+}
+
+.services {
+    border: 2px solid white;
+    height: 100%;
+}
+
+.services a, .opening a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid #424e5b;
+    border-radius: 30px;
+    margin-top: 1rem; 
+    margin-bottom: 1rem; 
+    padding: 0.5rem 2rem;
+    display: inline-block; 
+    width: fit-content; 
+    background-color: #28425F;
+}
+
+.funny {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* margin: 50px; */
+    padding: 50px;
+    margin-bottom: 0;
+    background-color: #28425F;
+}
+
+.fun-image img {
+    width: 100%;
+}
+.fun-text{
+    padding: 10px;
+}
+
+footer {
+    background-color: #06273a;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+/* rental page */
+
+
+table {
+    border-collapse: collapse;
+    color: white; 
+    margin: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 2px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #28425F;
+}
+
+tr:nth-child(even) {
+    background-color: #28425F;
+}
+
+/* Estilo para la imagen dentro de la celda */
+td img {
+    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+    margin-right: 10px; 
+    width: 200px;
+    height: 200px;
+}
+
+.table-title th {
+    text-align: center;
+}
+
+tr td a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid #424e5b;
+    border-radius: 30px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    width: fit-content;
+    /* background-color: #28425F; */
+}
+
+tr, td {
+    font-size: 25px;
+}
+
+/* reservation page */
+
+/* Estilos CSS específicos para reservation.html */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    color: white;
+}
+
+/* Agrega estilos adicionales según sea necesario */
+.reservation-form {
+    display: grid;
+    gap: 10px; /* Espacio entre los elementos */
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    background-color: #28425F;
+    padding: 25px;
+}
+
+.reservation-form-container {
+    padding: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 8px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* El tamaño incluye el borde y el relleno */
+}
+
+textarea {
+    height: 100px; /* Altura del campo de texto */
+}
+
+input[type="submit"] {
+    text-decoration: none;
+    color: white;
+    border: 2px solid #424e5b;
+    border-radius: 30px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 2rem;
+    /* width: fit-content; */
+    background-color: #424e5b; /* Agregar color de fondo */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    margin: auto; 
+}
+.contract-info {
+    margin: 20px;
+}
+.contract-info  h2 {
+    text-align: center;
+}
+
+/* contact page */
+
+.w3-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.w3-modal-content {
+    background-color: #06273a;
+    color: white;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 50px;
+    position: relative;
+    font-size: 30px;
+}
+
+.w3-button {
+    position: absolute;
+    display: inline-block;    
+    right: 0;
+    top: 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #28425F;
+}
+
+/* Add your styles for the contact page here */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.contact-info, .map, .contact-form {
+    background-color: #28425F;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-info, .map {
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.close_btn {
+    position: absolute;
+    display: inline-block;    
+    right: 0;
+    top: 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.close_btn:hover {
+    background-color: #28425F;
+}

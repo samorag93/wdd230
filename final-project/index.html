@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoot - Home</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo_link" src="images/logo.png" alt="logo-image"></a>
+        <a id="menu" href="#"></a>
+    </header>
+    <nav>
+        <div class="link">
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.png" alt="instagram"></a>
+            <a href="https://www.x.com"><img src="images/x.png" alt="X"></a>
+        </div>        
+    </nav>
+    <div id="banner" class="banner">
+        <span onclick="closebutton()" class="w3-button w3-display-topright ">&times;</span>
+        <p id="temp-max"></p>
+    </div>
+    <main>
+        <div class="hero-box">
+            <div class="hero-img">
+                <img class="scoot-img" src="images/scoot-hero.webp" alt="People in Scooter">
+            </div>
+            <div class="hero-msg">
+                <h1>Welcome to Scoots</h1>
+                <p>Welcome to Scoots, your gateway to limitless exploration on the beautiful island of Cozumel! At Scoots, we are dedicated to providing you the freedom to discover every nook and cranny of this gem of the Mexican Caribbean at your own pace. Whether you're looking for an exciting solo adventure or a relaxed coastline ride with your loved ones, our scooters are ready to take you on an unforgettable journey. From the quaint towns to the crystal-clear beaches and fascinating historical sites, we invite you to immerse yourself in the magic of Cozumel with Scoots as your trusted ally in exploration.</p>
+            </div>
+            <div class="weather-card">
+                
+                <div class="current-weather">
+                    <h2>San Miguel de Cozumel, MX</h2>
+                    <h3 id="date">Date</h3>
+                    <p><img id="weatherIcon" src="" alt=""></p>
+                    <p><span id="temperature"></span></p>
+                    <p id="description"></p>
+                    <p id="humidity"></p>
+                    <h3>Next Day Forecast (15:00h)</h3>
+                    <p>Temperature: 28°C</p>
+                    <p>Condition: Partly Cloudy</p>
+                    <img src="images/partly-cloudy.png" alt="Partly Cloudy">
+                </div>
+            </div>
+        </div>
+        <h1 class="title">Our Products</h1>
+        <article class="slide-services">
+            <section class="services">
+                <img class="services-img" src="images/scooter-card.webp" alt="visits">
+                <h2>Scooters 1-2 persons</h2>
+                <hr>
+                <a class="button" href="rentals.html">Book it Now</a>
+            </section>
+            <section class="services">
+                <img class="services-img"  src="images/side-card.webp" alt="Galery of properties">
+                <h2>ATVs 4 persons</h2>
+                <hr>
+                <a class="button" href="rentals.html">Book it Now</a>
+            </section>
+            <section class="services" >
+                <img class="services-img" src="images/jeep-card.webp" alt="Information">
+                <h2>Jeeps 5-6 persons</h2>
+                <hr>
+                <a class="button" href="rentals.html">Book it Now</a>
+            </section>
+        </article>
+        <section class="opening">
+            <div class="open-text"><br><br>
+                <h2>Service Hours</h2>
+                <p>Monday - Friday: 9 a.m. - 6 p. m.</p>
+                <p>Saturday: 10 a.m. - 2 p. m.</p>
+                <p>Sunday: Closed</p>
+                <a class="button" href="contact.html">Contact Us</a>
+            </div>
+            <div class="open-image" >
+                <img  src="images/opening.webp" alt="Opening Image">
+            </div>
+        </section>
+        <h1 class="title">Our Services</h1>
+        <article class="slide-services">
+            <section class="services">
+                <div class="image-container">
+                    <img class="services-img" src="images/cenotes.webp" alt="Cenotes Image">
+                    <img class="hover-img" src="images/cenotes2.webp" alt="Cenotes Hover Image">
+                </div>
+                <h2>Cenotes</h2>
+                <hr>
+                <a class="button" href="aboutus.html">Book it Now</a>
+            </section>
+            <section class="services">
+                <div class="image-container">
+                    <img class="services-img" src="images/ruins.webp" alt="Ruins Image">
+                    <img class="hover-img" src="images/ruinas2.webp" alt="Ruins Hover Image">
+                </div>
+                <h2>The Mayan Ruins</h2>
+                <hr>
+                <a class="button" href="discover.html">Book it Now</a>
+            </section>
+            <section class="services" >
+                <div class="image-container">
+                    <img class="services-img" src="images/shopping.webp" alt="Shopping Image">
+                    <img class="hover-img" src="images/restaurant.webp" alt="Restaurant Hover Image">
+                </div>
+                <h2>Shopping & Restaurants</h2>
+                <hr>
+                <a class="button" href="discover.html">Book it Now</a>
+            </section>
+        </article>
+        <section class="funny">
+            <div class="fun-image">
+                <img  src="images/cozumel_island.webp" alt="Opening Image">
+            </div>
+            <div class="open-text"><br><br>
+                <h2>Guaranteed Fun</h2><br>
+                <p class="fun-text">Fun is guaranteed at Scoots! Get ready for exciting adventures as you explore the 
+                    beautiful island of Cozumel at your own pace. Whether you're heading to exotic 
+                    destinations, discovering hidden treasures, or simply enjoying the sea breeze on 
+                    a relaxing ride, Scoots gives you the freedom to create unforgettable memories. 
+                    Join us and let yourself be carried away by the thrill of exploration on two wheels. 
+                    We are waiting for you at Scoots for an unforgettable experience!</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> 
+            por Scoots created by Moroni Aguilar</p>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/reservation.js"></script>
+</body>
+</html>

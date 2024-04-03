@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Scoot</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo_link" src="images/logo.png" alt="logo-image"></a>
+        <a id="menu" href="#"></a>
+    </header>
+    <nav>
+        <div class="link">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.png" alt="instagram"></a>
+            <a href="https://www.x.com"><img src="images/x.png" alt="X"></a>
+        </div>        
+    </nav>
+    <div id="banner" class="banner">
+        <span onclick="closebutton()" class="w3-button w3-display-topright ">&times;</span>
+        <p id="temp-max"></p>
+    </div>
+    <main>
+        <div class="contact-container">
+            <section class="contact-info">
+                <h2>Contact Information</h2><br>
+                <p>Address 1: Street Name, City, Country</p>
+                <p>Phone: +123456789</p>
+                <p>Email: info@scoot.com</p>
+                <p>Address 2: Street Name, City, Country</p>
+                <p>Phone: +987654321</p>
+                <p>Email: sales@scoot.com</p>
+            </section>
+            <section class="map">
+                <h2>Locations</h2><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.2052529493412!2d-87.07767955172831!3d20.62048895616149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e43399f2c6f9f%3A0xf2ea9696fb1ded19!2sMuelle%2C%20Centro%2C%2077710%20Playa%20del%20Carmen%2C%20Q.R.%2C%20M%C3%A9xico!5e0!3m2!1ses!2ses!4v1712076362269!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+            <section class="map">
+                <h2>Locations</h2><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.8446966269134!2d-86.97381898784366!3d20.47690196163841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e57491a71c81d%3A0x6933058e58e0ee3d!2sTerminal%20Maritima%20Puerta%20Maya!5e0!3m2!1ses!2ses!4v1712076493093!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+            <section class="contact-form">
+                <h2>Contact Form</h2>
+                <form id="contactForm" action="#" method="post">
+                    <div class="contact-form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="comment">Comment:</label>
+                        <textarea id="comment" name="comment" required></textarea>
+                    </div>
+                    <div class="contact-form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div id="id01" class="w3-modal" style="display: none;">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="closeModal()" class="close_btn" >&times;</span>
+                    <p>Thank you for contacting us, we will contact you as soon as possible</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> 
+            por Scoots created by Moroni Aguilar</p>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/weather.js"></script>
+</body>
+</html>
