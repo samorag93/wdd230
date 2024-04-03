@@ -221,10 +221,11 @@ footer {
 table {
     border-collapse: collapse;
     color: white; 
-    margin: 100px;
+    /* margin: 100px; */
     margin-top: 0;
     margin-bottom: 0;
     border: 2px;
+    width: 100%;
 }
 
 table, th, td {
@@ -266,7 +267,6 @@ tr td a {
     padding: 0.5rem 2rem;
     display: inline-block;
     width: fit-content;
-    /* background-color: #28425F; */
 }
 
 tr, td {
