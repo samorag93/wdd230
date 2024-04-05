@@ -56,7 +56,6 @@ nav a {
 }
 
 #banner::before {
-    /* content: "X"; */
     position: absolute;
     top: 5px;
     right: 5px;
@@ -217,15 +216,18 @@ footer {
 
 /* rental page */
 
-
+/* .main-rentals {
+    margin: 20px;
+} */
 table {
     border-collapse: collapse;
-    color: white; 
-    /* margin: 100px; */
+    color: white;
+    margin: 20px;
     margin-top: 0;
     margin-bottom: 0;
-    border: 2px;
-    width: 100%;
+    /* border: 2px; */
+    width: calc(100% - 40px);
+    
 }
 
 table, th, td {

@@ -166,7 +166,7 @@
 const url = 'https://api.openweathermap.org/data/2.5/weather';
 const apiKey = '11e47217061cf08187ac30206bdc7206';
 
-
+// https://api.openweathermap.org/data/2.5/weather?=lat
 function calculateWindChill(temp, windSpeed) {
     const T = (temp * 9/5) + 32; // Convert temperature to Fahrenheit
     const V = windSpeed * 2.237; // Convert wind speed to miles per hour
@@ -207,6 +207,7 @@ weatherFn(); // Llamada a la función para obtener y mostrar los datos del clima
 const apiKey2 = '11e47217061cf08187ac30206bdc7206';
 const url2 = 'https://api.openweathermap.org/data/2.5/forecast';
 
+
 function getForecast(city) {
   const requestUrl = `${url2}?q=${city}&appid=${apiKey2}&units=imperial`;
   fetch(requestUrl)
@@ -230,9 +231,9 @@ function displayForecast(forecast) {
   const today = new Date();
   const tomorrow = new Date();
   today.setDate(today.getDate() + 1);
-  tomorrow.setDate(today.getDate() + 2);
+  tomorrow.setDate(today.getDate() + 1);
   const dayAfterTomorrow = new Date();
-  dayAfterTomorrow.setDate(today.getDate() + 3);
+  dayAfterTomorrow.setDate(today.getDate() + 2);
   document.getElementById('forecast-day-0').textContent = today.toLocaleDateString('en-US', { weekday: 'long' });
   document.getElementById('forecast-day-1').textContent = tomorrow.toLocaleDateString('en-US', { weekday: 'long' });
   document.getElementById('forecast-day-2').textContent = dayAfterTomorrow.toLocaleDateString('en-US', { weekday: 'long' });
