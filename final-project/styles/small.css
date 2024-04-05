@@ -83,10 +83,22 @@
         height: auto; /* Mantiene la proporción de aspecto */
     }    
 
+	.hero-msg p {
+		margin: 20px;
+	}
     .open-image img, .fun-image img {
     max-width: 100%;
     height: auto;
     }
+
+	.slide-services {
+		margin: 20px;
+	}
+
+	.weather-card {
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+
 	table {
 		margin: 10px;
 	}

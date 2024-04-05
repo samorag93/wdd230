@@ -39,24 +39,8 @@ async function apiFetch() {
       console.log(error);
     }
 }
-
-async function fetchNextDayForecast() {
-  try {
-      const response = await fetch(`${nextDayUrl}`);
-      if (response.ok) {
-          const data = await response.json();
-          console.log(data); // testing only
-          displayNextDayForecast(data);
-      } else {
-          throw Error(await response.text());
-      }
-  } catch (error) {
-      console.log(error);
-  }
-}
   
 apiFetch();
-fetchNextDayForecast();
   
 function displayResults(data) {
     document.getElementById('temp-max').textContent = `Today Temperature Max: ${Math.round(data.main.temp_max)}ºF`;
@@ -67,23 +51,7 @@ function displayResults(data) {
     document.getElementById('description').textContent = capitalize(data.weather[0].description);
     document.getElementById('humidity').textContent = `Humidity: ${data.main.humidity}%`;
 }
-function displayNextDayForecast(data) {
-  const nextDayForecast = data.daily[1]; // El índice 1 corresponde al siguiente día
-  const nextDayTemperature = Math.round(nextDayForecast.temp.day);
-  const nextDayWeatherIcon = nextDayForecast.weather[0].icon;
-  const nextDayWeatherDescription = capitalize(nextDayForecast.weather[0].description);
 
-  document.getElementById('next-day-temperature').textContent = `Temperature: ${nextDayTemperature}°F`;
-  document.getElementById('next-day-condition').textContent = `Condition: ${nextDayWeatherDescription}`;
-  document.getElementById('next-day-weather-icon').setAttribute('src', `https://openweathermap.org/img/w/${nextDayWeatherIcon}.png`);
-}
-
-
-
-function closebutton() {
-  var banner = document.getElementById("banner");
-  banner.style.display = "none"; // Ocultar el banner al hacer clic en el span
-}
 
 const nextDayElement = document.getElementById("next-day");
 
@@ -119,7 +87,7 @@ fetch(urlfor15h)
                 const description = weatherEvents[0].description;
                 const icon = weatherEvents[0].icon;
 
-                // Mostrar la temperatura, descripción y icono en el HTML
+                
                 const temperaturaElemento = document.getElementById('next_temperature');
                 temperaturaElemento.textContent = `${temperatura} °F`;
 
@@ -129,12 +97,9 @@ fetch(urlfor15h)
                 const iconElemento = document.getElementById('next-day-weather-icon');
                 iconElemento.src = `http://openweathermap.org/img/wn/${icon}.png`;
 
-                break; // Romper el bucle una vez que se haya encontrado el bloque deseado
+                break; 
             }
         }
-         // Mostrar la temperatura en el HTML
-        // const temperaturaElemento = document.getElementById('next_temperature');
-        // temperaturaElemento.textContent = `${temperatura} °F`;
       })
       .catch(error => {
         console.error('Error al obtener datos:', error);
