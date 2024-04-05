@@ -158,7 +158,10 @@ function closebutton() {
 }
 
 
-
+function closebutton() {
+    var banner = document.getElementById("banner");
+    banner.style.display = "none"; // Ocultar el banner al hacer clic en el span
+}
 
 // JavaScript específico para reservation.html
 document.addEventListener('DOMContentLoaded', function() {

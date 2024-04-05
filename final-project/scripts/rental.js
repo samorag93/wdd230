@@ -31,3 +31,8 @@ function closebutton() {
     var banner = document.getElementsByClassName("banner");
     banner.style.display = "none"; // Ocultar el banner al hacer clic en el span
 }
+
+function closebutton() {
+    var banner = document.getElementById("banner");
+    banner.style.display = "none"; // Ocultar el banner al hacer clic en el span
+}

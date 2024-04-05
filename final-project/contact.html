@@ -85,34 +85,7 @@
         <p>&copy; <span id="year"></span> 
             por Scoots created by Moroni Aguilar</p>
     </footer>
-    <script>
-        async function apiFetch() {
-            try {
-                const response = await fetch(`${url}`);
-      if (response.ok) {
-        const data = await response.json();
-        console.log(data); // testing only
-        displayResults(data); 
-      } else {
-        throw Error(await response.text());
-      }
-    } catch (error) {
-      console.log(error);
-    }
-}
-  
-apiFetch();
-  
-function displayResults(data) {
-    document.getElementById('temp-max').textContent = `Today Temperature Max: ${Math.round(data.main.temp_max)}ºF`;
-    temperature.innerHTML = `${Math.round(data.main.temp)}&deg;F`;
-    const weatherEvents = data.weather;
-    weatherIcon.setAttribute('src', `https://openweathermap.org/img/w/${weatherEvents[0].icon}.png`);
-    weatherIcon.setAttribute('alt', weatherEvents[0].description);
-    document.getElementById('description').textContent = capitalize(data.weather[0].description);
-    document.getElementById('humidity').textContent = `Humidity: ${data.main.humidity}%`;
-}
-    </script>
+    
     <script src="scripts/contact.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/scripts.js"></script>

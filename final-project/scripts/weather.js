@@ -65,9 +65,10 @@ function getNextDay() {
 }
 
 function closebutton() {
-  var banner = document.getElementsByClassName("banner");
+  var banner = document.getElementById("banner");
   banner.style.display = "none"; // Ocultar el banner al hacer clic en el span
 }
+
 
 // Actualizar el contenido de la etiqueta <h3> con el día de mañana
 nextDayElement.textContent = `Next Day Forecast (${getNextDay()} 15:00h)`;
@@ -108,7 +109,12 @@ fetch(urlfor15h)
       })
       .catch(error => {
         console.error('Error al obtener datos:', error);
-      });
+});
+
+
+      
+
+
 
 function capitalize(str) {
     return str.replace(/\b\w/g, function (char) {
