@@ -12,10 +12,7 @@ hambutton.addEventListener('click', () => {
 });
 
 
-function closebutton() {
-    var banner = document.getElementsByClassName("banner");
-    banner.style.display = "none"; // Ocultar el banner al hacer clic en el span
-}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Obtener el formulario de contacto

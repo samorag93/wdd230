@@ -152,6 +152,11 @@ function displayResults(data) {
     document.getElementById('humidity').textContent = `Humidity: ${data.main.humidity}%`;
 }
 
+function closebutton() {
+    var banner = document.getElementsByClassName("banner");
+    banner.style.display = "none"; // Ocultar el banner al hacer clic en el span
+}
+
 
 
 

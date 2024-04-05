@@ -64,6 +64,11 @@ function getNextDay() {
     return tomorrow.toLocaleDateString('en-US', options);
 }
 
+function closebutton() {
+  var banner = document.getElementsByClassName("banner");
+  banner.style.display = "none"; // Ocultar el banner al hacer clic en el span
+}
+
 // Actualizar el contenido de la etiqueta <h3> con el día de mañana
 nextDayElement.textContent = `Next Day Forecast (${getNextDay()} 15:00h)`;
 
